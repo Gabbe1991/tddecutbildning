@@ -7,6 +7,7 @@ test('AuthService should handle authentication and have a login method', () => {
   const authService = new AuthService();
   expect(typeof authService).toBe('object');
   expect(typeof authService.login).toBe('function');
+  expect(authService.login('user', 'password')).toBe(true);
 });
 
 
