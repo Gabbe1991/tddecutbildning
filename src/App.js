@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+class App {
+  constructor(Appname, password) {
+    this._Appname = Appname;
+    this._password = password;
+  }
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  equals(otherApp) {
+    return this.Appname === otherApp.Appname;
+  }
+
+  get Appname() {
+    return this._Appname;
+  }
+
+  get password() {
+    return this._password;
+  }
 }
 
 export default App;
